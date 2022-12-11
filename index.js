@@ -261,19 +261,18 @@ Aşağıdakileri sesliHarfSayaci fonskiyonunda yapın.
 İPUCU - .includes() methoduna bakabilirsin. (https://www.w3schools.com/jsref/jsref_includes.asp)
 */
 
-//sesli if statment'ımda sesli harfleri .includes kullanarak saydıramadım.
 
-//let myStr = "ali";
-//let myArray = Array.from(myStr);
-//let countVowel = 0;
-
-//for (let i = 0; i < myStr.length; i++){
-  //if (myArray.includes('a') || myArray.includes('e') || myArray.includes('ı') || myArray.includes('i') || myArray.includes('o') || myArray.includes('ö') || myArray.includes('u') || myArray.includes('ü') || myArray.includes('s') || myArray.includes('ş')){
-    //countVowel += 1;
-  //}
-//}
-
-//console.log(countVowel);
+const sesliHarfler = ['a', 'e', 'ı','i', 'o', 'ö', 's', 'ş', 'u', 'ü'];
+function sesliHarfSayaci(string){
+  let sesliHarfSayisi = 0;
+  for (let harf of string){
+    if (sesliHarfler.includes(harf)){
+      sesliHarfSayisi += 1;
+    };
+  };
+  return sesliHarfSayisi;
+};
+console.log(sesliHarfSayaci('merhaba ben yiğit'));
 
 
 
